@@ -3,36 +3,25 @@
 
 <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.2/css/bootstrap.min.css"
-        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
-    <title>Project</title>
-
-    <!-- linc css -->
-    <link rel="stylesheet" href="style.css">
-
-</head> 
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="resources/css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
 <body>
-
+ 
     <!-- Logo -->
 
     <section id="top">
         <img src="logo" alt="Logo">
       </section>
-
-      <div class="container">
-        <h1 class="jwd">Add Task</h1>
-        <div class="row">
             <div class="col">
-
             <!-- if need third_party_tap-->
-                <h2></h2>
-                <form id="newTaskForm">
-
+                <h2>Add Task</h2>
+                <form id="Task">
     <table>
         <tr>
             <td>
@@ -46,23 +35,29 @@
                     </div>
                     <div>
                         <label for="task name">Task Name</label>
-                        <input type="text" class="form-control" id="newTaskNameInput">
+                        <input type="text" class="form-control" id="Task Nam">
                     </div>
                     <div>
                         <label for="description">Description</label>
-                        <textarea type="text" class="form-control" id="newTaskDescription"></textarea>
+                        <textarea type="text" class="form-control" id="Description"></textarea>
                     </div>
                     <div>
                         <label for="Assigned To">Assigned To</label>
-                        <input type="text" class="form-control" id="newTaskAssignedTo">
+                        <input type="text" class="form-control" id="Assigned To">
                     </div>
                     <div>
                         <label for="Status">Status</label>
-                        <input type="text" id="productCode" name="Status">
+                        <input type="text" class="form-control" id="Status">
+
+                        <select id="status" name="staus" name="Status" required>
+                        <option value="one">1</option>
+                        <option value="one">1</option>
+                        <option value="one">1</option>
+                        </select>
                     </div>
                     <div>
                         <label for="Due Date">Due Date</label>
-                        <input type="date" class="form-control" id="newTaskDueDate">
+                        <input type="due date" class="form-control" id="Due Date">
                     </div>
                 </div>
 
@@ -74,6 +69,7 @@
                     <div class="form_action--button">
                         <input type="add" value="Add">
                         <input type="reset" value="Reset">
+                       
                     </div>
                 </form>
 
