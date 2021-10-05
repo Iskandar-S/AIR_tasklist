@@ -1,0 +1,14 @@
+.wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+}
+
+#topbar {
+background-color: rgb(119, 245, 119);
+}
+
+#sidebar {
+    width: 250px;
+    height: 100vh;
+}
