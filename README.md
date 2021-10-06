@@ -6,4 +6,4 @@
 
 git pull origin master
 
-git push origin <your branch>
+git push origin "your branch"
