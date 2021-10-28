@@ -31,6 +31,9 @@ input {
 	font: 1rem "Fira Sans", sans-serif;
 }
 
+
+
+
 .controls {
 	padding-top: 1rem;
 	display: grid;
@@ -60,6 +63,7 @@ input[type="reset"] {
 	width: 20%;
 }
 
+
 input[type="submit"] {
 	grid-column: 2;
 	grid-row: 3;
@@ -80,3 +84,4 @@ input[type="submit"] {
 button.margin-right {
 	margin-right: 20px;
 }
+
