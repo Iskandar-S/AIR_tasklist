@@ -39,53 +39,53 @@
         </nav>
     </div>
     <div class="container">
-        <div class="col">
+        <div>
             <h1>Add Task</h1>
-            <form id="Task">
-<table>
-    <tr>
-        <td>
-            <div class="container2">
-                    <label for="project">Project</label>
-                    <input type="text" class="project" id="project">
-                </div>
-
-                <div class="form-group">
-                    <label for="task name">Task Name</label>
-                    <input type="text" id="form-control" name="Task Name" required>
-                </div>
-
-                <form>
-                <label for="Discription">Description</label>
-                <form action="/action_page.php">
-                <textarea rows="8" cols="70" name="comment" required>
-                </textarea>
-                </form>
-                <div class="form-group col">
-                    <label for="Assigned To">Assigned To</label>
-                    <input type="text" id="Assigned To" name="Assigned To" required>
-                </div>
-                <label for="exampleDataList" class="form-label">Status</label>
-                <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
-                <datalist id="datalistOptions">
-                    <option value="Review">
-                        <option value="In progress">
-                        <option value="Done">
-                </datalist>
-                <div class="form-group col">
-                    <label for="newTaskDueDate">Due Date</label>
-                        <input type="date" class="form-control" id="DueDate" required>
-                </div>
-                <div class="flex-parent jc-center">
-                <input type="submit" value="Add Task">
-                <input type="reset" value="Reset">
-            </div>
-
-
-    </tr>
-</table>
-            </form>
         </div>
+        <form id="Task">
+            <table>
+                <tr>
+                    <td>
+                        <div class="input_form">
+                            <label for="project">Project</label>
+                            <input type="text" class="project" id="project">
+                        </div>
+                        <div class="input_form">
+                            <label for="task name">Task Name</label>
+                            <input type="text" id="form-control" name="Task Name" required>
+                        </div>
+                        <div class="input_form">
+                        <label for="Description">Description</label>
+                        <form>
+                        <textarea type="text" name="comment" required></textarea>
+                        </form>
+                        </div>
+                        <div class="input_form">
+                            <label for="Assigned To">Assigned To</label>
+                            <input type="text" id="Assigned To" name="Assigned To" required>
+                        </div>
+                        <div class="input_form">
+                        <label for="exampleDataList">Status</label>
+                        <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search..." />
+                        <datalist id="datalistOptions">
+                            <option value="Review">
+                            <option value="In progress">
+                            <option value="Done">
+                        </datalist>
+                        </div>
+                        <div class="input_form">
+                            <label for="newTaskDueDate">Due Date</label>
+                            <input type="date" class="form-control" id="DueDate" required>
+                        </div>
+                        <div class="flex-parent jc-center">
+                            <input type="submit" value="Add Task">
+                            <input type="reset" value="Reset">
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
     <footer>
     </footer>
 
@@ -94,11 +94,6 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
 integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
 crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-crossorigin="anonymous"></script>
-<script src="js/TaskManager.js"></script>
-<script src="js/index.js"></script>
 </body>
 
 </html>
