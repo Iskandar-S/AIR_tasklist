@@ -16,23 +16,13 @@ table {
 	background: rgb(233, 231, 231);
 }
 table.list {
-	text-align: center;
-	width: 100%;
-}
-
-input {
-	width: 100%;
-	padding: 12px 20px;
-	margin: 8px 0;
-	display: inline-block;
+	width: 90%;
+	margin: auto;
 }
 
 .output {
 	font: 1rem "Fira Sans", sans-serif;
 }
-
-
-
 
 .controls {
 	padding-top: 1rem;
@@ -63,7 +53,6 @@ input[type="reset"] {
 	width: 20%;
 }
 
-
 input[type="submit"] {
 	grid-column: 2;
 	grid-row: 3;
@@ -71,6 +60,13 @@ input[type="submit"] {
 	color: #fff;
 	margin: 0.4rem;
 	width: 20%;
+}
+
+.input_form {
+	width: 95%;
+	padding: 5px;
+	margin: auto;
+	display: inline-flex;
 }
 
 .flex-parent {
@@ -84,4 +80,3 @@ input[type="submit"] {
 button.margin-right {
 	margin-right: 20px;
 }
-
