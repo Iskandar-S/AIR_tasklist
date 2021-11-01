@@ -6,9 +6,18 @@ class TaskManager {
     }
     addTask(name, description, assignedTo, dueDate, status = "TODO") {
         this.currentId ++;
-        this.tasks.push(this.currentId, name, description, assignedTo, dueDate, status);
-    }
+        const task = {
+            id: this.currentId,
+            name: name,
+            description: description,
+            assignedTo: assignedTo,
+            dueDate: dueDate,
+            status: status
+        };
+        this.tasks.push(task);
 }
+    }
 const testTask = new TaskManager();
 console.log(testTask.tasks);
-testTask.addTask("finish project", 'adsfdsf', 'Nat5', '10-28-2021');
+testTask.addTask("finish project", 'adsfdsf', 'Nat5', '10-28-2021');    
+console.log(testTask.tasks);

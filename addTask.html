@@ -16,47 +16,44 @@
     <div class="container">
         <div class="col">
             <h1>Add Task</h1>
-            <form id="Task">
+            <form id="taskForm" >
 <table>
-    <tr>
-        <td>
-            <div class="container2">
-                    <label for="project">Project</label>
-                    <input type="text" class="project" id="project">
+    <tr>          
+                <div class="form-group">
+                    <label for="task-name">Task Name</label>
+                    <input type="text" class="form-control" id="task-name" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="task name">Task Name</label>
-                    <input type="text" id="form-control" name="Task Name" required>
-                </div>
+                    <label for="description">Description</label>
+                    <textarea class="form-control" rows="8" id="description" required></textarea>
+                  </div>
+               
+                
+                <div class="form-group col">
+                    <label for="assigned-to">Assigned To</label>
+                    <input type="text" id="assigned-to" class="form-control" required>
+                </div>                
+                <div class="form-group col">
+                    <label for="taskStatus">Status</label>
+                    <!-- <input type="text" class="form-control" id="taskStatus" required> -->
 
-                <form>
-                <label for="Discription">Description</label>
-                <form action="/action_page.php">
-                <textarea rows="8" cols="70" name="comment" required>
-                </textarea>
-                </form>
+                    <select class="form-select" aria-label="Select" id="taskStatus" required>
+                        <option selected>Select Status</option>
+                        <option value="To Do">To Do</option>
+                        <option value="Pending">Pending</option>
+                        <option value="Done">Done</option>
+                      </select>
+                </div>              
+
                 <div class="form-group col">
-                    <label for="Assigned To">Assigned To</label>
-                    <input type="text" id="Assigned To" name="Assigned To" required>
-                </div>
-                <label for="exampleDataList" class="form-label">Status</label>
-                <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
-                <datalist id="datalistOptions">
-                    <option value="Review">
-                        <option value="In progress">
-                        <option value="Done">
-                </datalist>
-                <div class="form-group col">
-                    <label for="newTaskDueDate">Due Date</label>
-                        <input type="date" class="form-control" id="DueDate" required>
+                    <label for="dueDate">Due Date</label>
+                        <input type="date" class="form-control" id="dueDate" required>
                 </div>
                 <div class="flex-parent jc-center">
-                <input type="submit" value="Add Task">
+                <input id="addTask" type="Submit" value="Add Task">
                 <input type="reset" value="Reset">
-            </div>
-
-
+                </div>
     </tr>
 </table>
             </form>
@@ -77,4 +74,5 @@ crossorigin="anonymous"></script>
 </body>
 
 </html>
+
     
