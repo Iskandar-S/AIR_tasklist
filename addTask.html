@@ -63,13 +63,16 @@
                     <label for="DueDate">Due Date</label>
                         <input type="date" class="form-control" id="dueDate" class="form-control" required>
                 </div>
-                <label for="status" class="form-label">Status</label>
-                <input class="form-control" list="datalistOptions" id="status" class="form-control" required>
-                <datalist id="datalistOptions">
-                    <option value="Review"></option>
-                    <option value="In Progress"></option>
-                    <option value="To Do"></option>
-                </datalist>
+                <div class="form-group col">
+                  <label for="taskStatus">Status</label>
+                  <!-- <input type="text" class="form-control" id="status" required> -->
+                  <select class="form-select" aria-label="Select" id="status" required>
+                    <option selected>Select Status</option>
+                    <option value="Review">Review</option>
+                    <option value="In Progress">In Progress</option>
+                    <option value="To Do">To Do</option>
+                  </select>
+                </div>
                 <div id="alertMessage" style="display: none" class="alert alert-danger" role="alert">
                   Error
                 </div>
