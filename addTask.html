@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AIR Tasklist</title>
+    <title>Add Task</title>
     <link rel="stylesheet" href="resources/css/reset.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
@@ -13,8 +13,6 @@
    
 </head>
 <body>
-
-
 <div class="container-fluid tasklist">
   <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container-fluid">
@@ -30,55 +28,51 @@
 
           <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                  <a class="nav-link" href="#"><i class="fa-solid fa-house">Dashboard</i></a>
-              </li>
-              <li class="nav-item active">
-                  <a class="nav-link" aria-current="true" href="#"><i class="fa-solid fa-square-plus">Add Task</i></a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#"><i class="fa-solid fa-list-check">Manage Tasks</i></a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#"><i class="fa-solid fa-calendar-days">Calendar</i></a>
-              </li>
-          </ul>
-          </div>
+            <a class="nav-link" href="index.html"><i class="fa-solid fa-house">Home</i></a>
+          </li>
+          <li class="nav-item active">
+              <a class="nav-link" aria-current="true" href="addTask.html"><i class="fa-solid fa-square-plus">Add Task</i></a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="task.html"><i class="fa-solid fa-list-check">Manage Tasks</i></a>
+          </li>
+          <!-- <li class="nav-item">
+              <a class="nav-link" href="#"><i class="fa-solid fa-calendar-days">Calendar</i></a>
+          </li> -->
+      </ul>
       </div>
   </nav>
-</div>
-
-<div class="header">
-  <h1></h1>
-</div>
-
-    <div class="container">
-        <div class="col">
-            <h1>Add Task</h1>
-            <form id="taskForm" >
+  </div>
+<div class="container">
+<div class="col">
+<h1>Add Task</h1>
 <table>
-    <tr>
+  <tr>
+    <td>
+      <form id="newTaskForm">
+        <div class="container2">
                 <div class="form-group">
                     <label for="task-name">Task Name</label>
-                    <input type="text" class="form-control" id="task-name" required>
+                    <input type="text" class="form-control" id="name" required>
                 </div>
                 <div class="form-group">
                     <label for="description">Description</label>
-                    <textarea class="form-control" rows="8" cols="140" id="description"></textarea>
+                    <textarea class="form-control" rows="8" cols="140" id="description" required></textarea>
                   </div>
                 <div class="form-group col">
                     <label for="assigned-to">Assigned To</label>
-                    <input type="text" id="assigned-to" class="form-control" required>
+                    <input type="text" id="assignedTo" class="form-control" required>
                 </div>
 
 
                 <div class="form-group col">
-                <label for="exampleDataList" class="form-label">Status</label>
-                <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
-                <datalist id="datalistOptions">
-                    <option value="Review">
-                        <option value="In progress">
-                        <option value="Done">
+                  <label for="status" class="form-label">Status</label>
+                  <input class="form-control" list="datalistOptions" id="status">
+                  <datalist id="datalistOptions">
+                      <option value="Review"></option>
+                      <option value="In Progress"></option>
+                      <option value="To Do"></option>
+                  </datalist>
             </div>
 
 
@@ -88,20 +82,33 @@
                         <input type="date" class="form-control" id="dueDate" required>
                 </div>
 
-                <div class="flex-parent jc-center">
-                <input id="addTask" type="Submit" value="Add Task">
-                <input type="reset" value="Reset">
-                </div>
-
-
-    </tr>
-</table>
-            </form>
-        </div>
-
+                <div class="flex-parent jc-center">                    
+                  <input type="submit" value="Add Task" id="addTask" required>
+                  <input type="reset" value="Reset" id="reset">
+              </div>
+            </div>
+          </form>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <!-- <div class="row">
+    <div class="col">
+        <h2>Tasks</h2>
+        <ul class="list-group" id="tasksList">
+        </ul>
+    </div>
+    <div class="col"></div>
+</div> -->
 </div>
+<div class="container-fluid">
+  <div class="container-fluid">
+    <h1 class="text-center">Manage Task</h1>
+  </div>
+  <div class="row row-cols-1 row-cols-md-3 g-4" id="taskCard">
+    </div>
 
- 
+
 
 <br>
 <br>
@@ -119,11 +126,6 @@
         </ul>
       </div>
     </footer> 
-
-
-</body>
-
-
 <!-- Link js -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -136,10 +138,3 @@ crossorigin="anonymous"></script>
 <script src="resources/index.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
