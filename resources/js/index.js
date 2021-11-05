@@ -68,7 +68,7 @@ newTaskForm.addEventListener('submit', (event) => {
     const dueDate = dueDateInput.value;
     const status = statusInput.value;
     
-    // validate(name, description, assignedTo);
+    validate(name, description, assignedTo);
     // Add task
     newTask.addTask(name, description, assignedTo, dueDate, status);
 
