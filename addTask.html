@@ -57,27 +57,23 @@
                     </textarea>
                 <div class="form-group col">
                     <label for="Assigned To">Assigned To</label>
-<<<<<<< HEAD
                     <input type="text" id="assignedTo" name="Assigned To" class="form-control" required>
                 </div>
                 <div class="form-group col">
                     <label for="DueDate">Due Date</label>
                         <input type="date" class="form-control" id="dueDate" class="form-control" required>
-=======
-                    <input type="text" id="assignedTo" name="Assigned To" required>
                 </div>
                 <div class="form-group col">
-                    <label for="DueDate">Due Date</label>
-                        <input type="date" class="form-control" id="dueDate" required>
->>>>>>> 5c00247064e75aa6b7edba221102b06f5c003c73
-                </div>
-                <label for="status" class="form-label">Status</label>
-                <input class="form-control" list="datalistOptions" id="status" class="form-control" required>
-                <datalist id="datalistOptions">
-                    <option value="Review"></option>
-                    <option value="In Progress"></option>
-                    <option value="To Do"></option>
-                </datalist>
+                  <label for="taskStatus">Status</label>
+                  <!-- <input type="text" class="form-control" id="taskStatus" required> -->
+
+                  <select class="form-select" aria-label="Select" id="status" required>
+                      <option selected>Select Status</option>
+                      <option value="Review">Review</option>
+                    <option value="In Progress">In Progress</option>
+                    <option value="To Do">To Do</option>
+                    </select>
+              </div>     
                 <div id="alertMessage" style="display: none" class="alert alert-danger" role="alert">
                   Error
                 </div>
