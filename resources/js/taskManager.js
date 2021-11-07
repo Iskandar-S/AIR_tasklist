@@ -92,7 +92,8 @@ class TaskManager {
           return foundTask;
       }
 
-    // Add render method
+
+
     render() {
       const tasksHtmlList = [];
 
@@ -112,6 +113,7 @@ class TaskManager {
     const taskCard = document.querySelector('#taskCard');
     taskCard.innerHTML = tasksHtml;
 }
+
 
 save() {
     const tasksJson = JSON.stringify(this.tasks);
