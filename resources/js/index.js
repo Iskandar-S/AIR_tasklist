@@ -14,6 +14,8 @@ const newTask = new TaskManager(0);
 newTask.load();
 newTask.render();
 
+
+
 const newTaskForm = document.querySelector('#newTaskForm');
 
 const nameInput = document.querySelector("#name");
@@ -151,3 +153,5 @@ taskCard.addEventListener('click', (event) => {
         newTask.render();
     }
 });
+
+
