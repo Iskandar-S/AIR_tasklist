@@ -41,7 +41,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     background-size: auto 100%;
     font-size: 18px;
-
+    
 }
 
   img {
@@ -206,7 +206,7 @@ input[type='submit']:hover {
   }
 
 
-  footer {
+  /* footer {
     padding-top: 20px;
     background-color: rgb(132, 172, 211); 
     padding: 0 1rem;
@@ -214,15 +214,30 @@ input[type='submit']:hover {
     font-size: 15px;
   }
 
-  footer .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between; 
+  footer.container {
+     align-items: center;
+     justify-content: space-between; 
      color: black;
-  }
+     display: fixed; 
+    }  */
    
-/* part2 */
- 
+
+    footer {
+      padding-top: 20px;
+      background-color: rgb(132, 172, 211); 
+      padding: 0 1rem;
+      display: block;
+      font-size: 15px;
+    }
+  
+    footer .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between; 
+       color: black;
+    }
+
+
 
 .jumbotron {
   background-image: url(../images/hand.jpeg); 
