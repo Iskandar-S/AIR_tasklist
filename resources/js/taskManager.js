@@ -4,7 +4,6 @@ const createTaskHtml = (id, name, description, assignedTo, dueDate, status) =>
   `
     <div class="card h-100" data-task-id=${id}>
       <div class="card-body">
-        <h2 class="card-title" >Card#</h2>
         <table class="table table-borderless">
         <tbody>
           <tr>
@@ -44,14 +43,14 @@ class TaskManager {
       this.currentId = currentId;
     }
     // Add addTask method
-    addTask(name, description, assignedTo, dueDate) {
+    addTask(name, description, assignedTo, dueDate, status) {
       const task = {
         id: this.currentId++,
         name,
         description,
         assignedTo,
         dueDate,
-        status: 'TO DO'
+        status
       };
       this.tasks.push(task);
       console.log(this.tasks);
