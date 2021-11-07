@@ -49,36 +49,47 @@
             <form id="newTaskForm">
               <div class="container2">
                 <div class="form-group">
-                    <label for="name">Task Name</label>
-                    <input type="text" id="name" name="Task Name" class="form-control" required>
+                  <label for="task-name">Task Name</label>
+                  <input type="text" class="form-control" id="name" required>
                 </div>
-                <label for="description">Description</label>
-                    <textarea rows="8" cols="70" name="comment" id="description" class="form-control" required>
-                    </textarea>
+                <div id="errorName" style="display: none" class="alert alert-danger" role="alert">
+                  Name must be longer than 4 characters
+                </div>
+                <div class="form-group">
+                  <label for="description">Description</label>
+                  <textarea class="form-control" rows="8" cols="140" id="description" required></textarea>
+                </div>
+                <div id="errorDescription" style="display: none" class="alert alert-danger" role="alert">
+                  Description must be longer than 6 characters
+                </div>
                 <div class="form-group col">
-                    <label for="Assigned To">Assigned To</label>
-                    <input type="text" id="assignedTo" name="Assigned To" class="form-control" required>
+                  <label for="assigned-to">Assigned To</label>
+                  <input type="text" id="assignedTo" class="form-control" required>
+                </div>
+                <div id="errorAssignedTo" style="display: none" class="alert alert-danger" role="alert">
+                  Assignee name must be longer than 1 character
                 </div>
                 <div class="form-group col">
-                    <label for="DueDate">Due Date</label>
-                        <input type="date" class="form-control" id="dueDate" class="form-control" required>
+                  <label for="dueDate">Due Date</label>
+                  <input type="date" class="form-control" id="dueDate" required>
                 </div>
-                <div class="form-group col">
-                  <label for="taskStatus">Status</label>
-                  <!-- <input type="text" class="form-control" id="status" required> -->
-                  <select class="form-select" aria-label="Select" id="status" required>
-                    <option selected>Select Status</option>
-                    <option value="Review">Review</option>
-                    <option value="In Progress">In Progress</option>
-                    <option value="To Do">To Do</option>
-                  </select>
-                </div>
-                <div id="alertMessage" style="display: none" class="alert alert-danger" role="alert">
+                <div id="errorDueDate" style="display: none" class="alert alert-danger" role="alert">
                   Error
                 </div>
+                <div class="form-group col">
+                  <label for="status" class="form-label">Status</label>
+                  <select class="form-select" aria-label="select status" id="status">
+                    <option value="TO DO" selected>TO DO</option>
+                    <option value="REVIEW">REVIEW</option>
+                  </select>
+                </div>
                 <div class="flex-parent jc-center">
-                    <input type="submit" value="Add Task" id="addTask" required>
-                    <input type="reset" value="Reset" id="reset">
+                  <input type="submit" value="Add Task" id="addTask" required>
+                  <input type="reset" value="Reset" id="reset">
+                </div>
+                <br>
+                <div id="success" style="display: none" class="alert alert-success" role="alert">
+                  Task created successfully!
                 </div>
               </div>
             </form>
@@ -93,7 +104,11 @@
           </ul>
       </div>
       <div class="col"></div>
-    </div> -->
+  </div> -->
+  <div class="row row-cols-1 row-cols-md-3 g-4" id="taskCard">
+    <div class="col">
+    </div>
+  </div>
   </div>
   <br>
   <br>
