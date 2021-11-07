@@ -2,9 +2,8 @@ console.log("connected!");
 
 const createTaskHtml = (id, name, description, assignedTo, dueDate, status) =>
   `
-    <div class="card h-100" data-task-id=${id}>
+    <div class="card h-100" style="width: 22rem; height: 22rem; margin: 30px;" data-task-id=${id}>
       <div class="card-body">
-        <h2 class="card-title" >Card#</h2>
         <table class="table table-borderless">
         <tbody>
           <tr>
@@ -29,10 +28,10 @@ const createTaskHtml = (id, name, description, assignedTo, dueDate, status) =>
           </tr>
         </tbody>
         </table>
-        <div class="d-grid gap-2 d-md-block">
-          <a href="#" class="btn btn-success done-button ${status === 'TO DO' ||  status === 'REVIEW' ? 'visible' : 'invisible'}" role="button" id="Done">Mark As Done</a>
-            <a href="#" class="btn btn-danger delete-button" role="button" id="delete">Delete</a>
-        </div>
+      </div>
+      <div class="card-body">
+        <a href="#" class="btn btn-success done-button ${status === 'TO DO' ||  status === 'REVIEW' ? 'visible' : 'invisible'}" role="button" id="Done">Mark As Done</a>
+        <a href="#" class="btn btn-danger delete-button" role="button" id="delete">Delete</a>
       </div>
     </div>
   `;
@@ -44,14 +43,14 @@ class TaskManager {
       this.currentId = currentId;
     }
     // Add addTask method
-    addTask(name, description, assignedTo, dueDate) {
+    addTask(name, description, assignedTo, dueDate, status) {
       const task = {
         id: this.currentId++,
         name,
         description,
         assignedTo,
         dueDate,
-        status: 'TO DO'
+        status
       };
       this.tasks.push(task);
       console.log(this.tasks);
@@ -93,8 +92,7 @@ class TaskManager {
           return foundTask;
       }
 
-    // Add render method (In Progress)
-
+    // Add render method
     render() {
       const tasksHtmlList = [];
 
@@ -114,7 +112,6 @@ class TaskManager {
     const taskCard = document.querySelector('#taskCard');
     taskCard.innerHTML = tasksHtml;
 }
-
 
 save() {
     const tasksJson = JSON.stringify(this.tasks);

@@ -12,9 +12,7 @@ console.log("connected!");
 
 const newTask = new TaskManager(0);
 newTask.load();
-newTask.render();
-
-
+// newTask.render();
 
 const newTaskForm = document.querySelector('#newTaskForm');
 
@@ -22,13 +20,13 @@ const nameInput = document.querySelector("#name");
 const descriptionInput = document.querySelector("#description");
 const assignedToInput = document.querySelector("#assignedTo");
 const dueDateInput = document.querySelector("#dueDate");
-// const statusInput = document.querySelector("#status");
+const statusInput = document.querySelector("#status");
 const errorMessage = document.querySelector("#alertMessage");
 
-const name = nameInput.value;
-const description = descriptionInput.value;
-const assignedTo = assignedToInput.value;
-const dueDate = dueDateInput.value;
+// const name = nameInput.value;
+// const description = descriptionInput.value;
+// const assignedTo = assignedToInput.value;
+// const dueDate = dueDateInput.value;
 // const status = statusInput.value;
 
 // Validate (In progress)
@@ -84,7 +82,7 @@ newTaskForm.addEventListener('submit', (event) => {
     const description = descriptionInput.value;
     const assignedTo = assignedToInput.value;
     const dueDate = dueDateInput.value;
-    // const status = statusInput.value;
+    const status = statusInput.value;
     
     //Validate inputs
     if (name.length <= 4) {
@@ -108,50 +106,13 @@ newTaskForm.addEventListener('submit', (event) => {
     if ((name.length > 4) && (description.length > 6) && (assignedTo.length > 1)) {
         document.querySelector(".alert-danger").style.display = "none";
         document.querySelector("#success").style.display = "block";
-        newTask.addTask(name, description, assignedTo, dueDate);
+        newTask.addTask(name, description, assignedTo, dueDate, status);
         newTask.save();
         newTask.render();
         nameInput.value = '';
         descriptionInput.value = '';
         assignedToInput.value = '';
         dueDateInput.value = '';
+        
     };
     });
-
-const taskCard = document.querySelector('#taskCard');
-
-taskCard.addEventListener('click', (event) => {
-    if (event.target.classList.contains('done-button')) {
-        const parentTask = event.target.parentElement.parentElement.parentElement;
-
-        const taskId = Number(parentTask.dataset.taskId);
-
-        const task = newTask.getTaskById(taskId);
-
-        task.status = 'DONE';
-
-        newTask.save();
-
-        newTask.render();
-    }
-
-    // Check if a "Delete" button was clicked
-    if (event.target.classList.contains('delete-button')) {
-        // Get the parent Task
-        const parentTask = event.target.parentElement.parentElement.parentElement;
-
-        // Get the taskId of the parent Task.
-        const taskId = Number(parentTask.dataset.taskId);
-
-        // Delete the task
-        newTask.deleteTask(taskId);
-
-        // Save the tasks to localStorage
-        newTask.save();
-
-        // Render the tasks
-        newTask.render();
-    }
-});
-
-
