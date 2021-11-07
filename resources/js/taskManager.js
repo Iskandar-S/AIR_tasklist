@@ -92,7 +92,7 @@ class TaskManager {
           return foundTask;
       }
 
-    // Add render method (In Progress)
+    // Add render method
     render() {
       const tasksHtmlList = [];
 
