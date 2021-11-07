@@ -60,7 +60,6 @@ h1 {
   
 }
 
-
 .card-title {
     font-weight:bold;
     text-align: center;
@@ -74,8 +73,6 @@ h1.text-center {
   padding-top: 0;
   font-size: 25px;
 }
-
-
 
 /* table {
     width: 40%;
@@ -118,11 +115,13 @@ input {
 
 
 
+
 input[type='reset'],
 input[type='submit'] {
     width: 5rem;
     justify-self: end;
     
+
 }
 
 input[type='reset'] {
@@ -138,6 +137,7 @@ input[type='reset'] {
 
   
 }
+
 
 input[type='reset']:hover {
     background-color: #f44336;
@@ -157,6 +157,7 @@ input[type='submit'] {
     color: black; 
     border: 2px solid #4CAF50;
     
+
 }
 
 input[type='submit']:hover {
@@ -179,11 +180,13 @@ input[type='submit']:hover {
 
 
 
+
   .btn-success {
     background-color: white; 
     color: black; 
     border: 2px solid #4CAF50;
     margin-left: 25%;
+
 
     
   }
@@ -222,6 +225,7 @@ input[type='submit']:hover {
     }  */
    
 
+
     footer {
       padding-top: 20px;
       background-color: rgb(132, 172, 211); 
@@ -255,6 +259,7 @@ input[type='submit']:hover {
   top: 180px;
   text-align: center;
 }
+
 .main h5 {
   color:rgb(68, 64, 64);
   font-family: 'Open Sans', sans-serif;
@@ -282,4 +287,5 @@ input[type='submit']:hover {
 }    
 
 /* 3 */
+
 
