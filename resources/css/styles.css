@@ -53,6 +53,11 @@ h1 {
 	font-size: 25px;
 }
 
+.card {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	margin: 80px;
+}
+
 .card-title {
 	font-weight: bold;
 	text-align: center;
@@ -112,7 +117,7 @@ input[type="submit"] {
 input[type="reset"] {
 	grid-column: 2;
 	grid-row: 3;
-
+	border-radius: 6px;
 	background-color: white;
 	border: 2px solid #f44336;
 	grid-column: 2;
@@ -130,7 +135,7 @@ input[type="submit"] {
 	grid-row: 3;
 	margin: 0.4rem;
 	width: 20%;
-
+	border-radius: 6px;
 	background-color: white;
 	color: black;
 	border: 2px solid #4caf50;
@@ -153,11 +158,16 @@ button.margin-right {
 	margin-right: 20px;
 }
 
+.btn-main {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	border-radius: 5px;
+}
+
 .btn-success {
 	background-color: white;
 	color: black;
 	border: 2px solid #4caf50;
-	margin-left: 25%;
+	margin: 25%;
 }
 
 .btn-success:hover {
@@ -169,7 +179,7 @@ button.margin-right {
 	background-color: white;
 	color: black;
 	border: 2px solid #f44336;
-	margin-right: 25%;
+	margin: 25%;
 }
 
 .btn-danger:hover {
