@@ -1,44 +1,41 @@
 console.log("connected!");
 
-const createTaskHtml = (id, name, description, assignedTo, dueDate, status) => {
-    html = `
-    <div class="col">
-        <div class="card h-100">
-          <div class="card-body">
-          <h2 class="card-title" >Card#${id}</h2>
-    <table class="table table-borderless">
-      <tbody>
-        <tr>
-          <td class="fw-bold">Project</td>
-          <td id>${name}</td>
-        </tr>
-        <tr>
-          <td class="fw-bold">Description</td>
-          <td>${description}</td>
-        </tr>
-        <tr>
-          <td class="fw-bold">Assigned To</td>
-          <td >${assignedTo}</td>
-        </tr>
-        <tr>
-          <td class="fw-bold">Due Date</td>
-          <td>${dueDate}</td>
-        </tr>
-        <tr>
-          <td class="fw-bold">Status</td>
-          <td class="${status === 'TODO' ? 'badge-danger' : 'badge-success'}">${status}</td>
-        </tr>
-      </tbody>
-    </table>
-    <div class="d-grid gap-2 d-md-block">
-              <a href="#" class="btn btn-success ${status === 'TODO' ? 'visible' : 'invisible'}" role="update-button" id="Done">Mark As Done</a>
-                <a href="#" class="btn btn-danger" role="delete-button" id="delete">Delete</a>
-            </div>
-          </div>
+const createTaskHtml = (id, name, description, assignedTo, dueDate, status) =>
+  `
+    <div class="card h-100" data-task-id=${id}>
+      <div class="card-body">
+        <h2 class="card-title" >Card#</h2>
+        <table class="table table-borderless">
+        <tbody>
+          <tr>
+            <td class="fw-bold">Task Name</td>
+            <td id>${name}</td>
+          </tr>
+          <tr>
+            <td class="fw-bold">Description</td>
+            <td>${description}</td>
+          </tr>
+          <tr>
+            <td class="fw-bold">Assigned To</td>
+            <td >${assignedTo}</td>
+          </tr>
+          <tr>
+            <td class="fw-bold">Due Date</td>
+            <td>${dueDate}</td>
+          </tr>
+          <tr>
+            <td class="fw-bold">Status</td>
+            <td>${status}</td>
+          </tr>
+        </tbody>
+        </table>
+        <div class="d-grid gap-2 d-md-block">
+          <a href="#" class="btn btn-success done-button ${status === 'TO DO' ||  status === 'REVIEW' ? 'visible' : 'invisible'}" role="button" id="Done">Mark As Done</a>
+            <a href="#" class="btn btn-danger delete-button" role="button" id="delete">Delete</a>
         </div>
-      </div>`;
-    return html;
-};
+      </div>
+    </div>
+  `;
 
 // Create TaskManager class
 class TaskManager {
@@ -54,7 +51,7 @@ class TaskManager {
         description,
         assignedTo,
         dueDate,
-        status: 'TODO'
+        status: 'TO DO'
       };
       this.tasks.push(task);
       console.log(this.tasks);
@@ -80,19 +77,19 @@ class TaskManager {
         // Set this.tasks to newTasks
         this.tasks = newTasks;
     }
-  
-  
+
+
       getTaskById(taskId) {
           let foundTask;
-  
+
           for (let i = 0; i < this.tasks.length; i++) {
               const task = this.tasks[i];
-  
+
               if (task.id === taskId) {
                   foundTask = task;
               }
           }
-  
+
           return foundTask;
       }
 
@@ -141,7 +138,5 @@ load() {
 
         this.currentId = Number(currentId);
     }
-}
-}
-
-
+  }
+};
