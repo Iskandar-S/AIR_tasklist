@@ -68,6 +68,14 @@ h1 {
    
 }
 
+h1.text-center {
+  font-weight: bold;
+  text-align: center;
+  padding-top: 0;
+  font-size: 25px;
+}
+
+
 
 /* table {
     width: 40%;
@@ -213,6 +221,50 @@ input[type='submit']:hover {
      color: black;
   }
    
+/* part2 */
+ 
 
- 
- 
+.jumbotron {
+  background-image: url(../images/hand.jpeg); 
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 800px;
+  overflow-x: hidden;
+
+  
+}
+
+.main {
+  position: relative;
+  top: 180px;
+  text-align: center;
+}
+.main h5 {
+  color:rgb(68, 64, 64);
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+  margin-top: 10%;
+  margin-bottom: 80px;
+  text-transform: none;
+  /* margin-bottom: 80px; */
+/* margin-top: 0; */
+}
+
+.btn-main {
+  background-color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 1.3px;
+  padding: 16px 40px;
+  text-decoration: underline;
+  text-transform: none;
+  color: rgb(58, 59, 59); 
+  
+  
+}    
+
+/* 3 */
+

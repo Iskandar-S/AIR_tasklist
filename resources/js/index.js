@@ -14,6 +14,8 @@ const newTask = new TaskManager(0);
 newTask.load();
 newTask.render();
 
+
+
 const newTaskForm = document.querySelector('#newTaskForm');
 
 const nameInput = document.querySelector("#name");
@@ -84,7 +86,7 @@ newTaskForm.addEventListener('submit', (event) => {
 
 const taskCard = document.querySelector('#taskCard');
 
-taskCard.addEventListener('click', (event) => {
+taskCard.addEventListener("click", (event) => {
     if (event.target.classList.contains('update-button')) {
         const parentTask = event.target.parentElement.parentElement;
 
@@ -117,3 +119,5 @@ taskCard.addEventListener('click', (event) => {
         newTask.render();
     }
 });
+
+
