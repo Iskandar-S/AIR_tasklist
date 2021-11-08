@@ -2,7 +2,7 @@ console.log("connected!");
 
 const createTaskHtml = (id, name, description, assignedTo, dueDate, status) =>
   `
-    <div class="card h-100" style="width: 22rem; height: 22rem; margin: 30px;" data-task-id=${id}>
+    <div class="card h-100" style="width: 22rem; height: 15rem; margin: 30px;" data-task-id=${id}>
       <div class="card-body">
         <table class="table table-borderless">
         <tbody>
@@ -137,3 +137,7 @@ load() {
     }
   }
 };
+
+module.exports = {
+  TaskManager: TaskManager
+}

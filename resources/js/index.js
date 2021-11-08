@@ -25,11 +25,11 @@ const dueDateInput = document.querySelector("#dueDate");
 const statusInput = document.querySelector("#status");
 const errorMessage = document.querySelector("#alertMessage");
 
-// const name = nameInput.value;
-// const description = descriptionInput.value;
-// const assignedTo = assignedToInput.value;
-// const dueDate = dueDateInput.value;
-// const status = statusInput.value;
+const name = nameInput.value;
+const description = descriptionInput.value;
+const assignedTo = assignedToInput.value;
+const dueDate = dueDateInput.value;
+const status = statusInput.value;
 
 // Validate (In progress)
 // function validFormFieldInput(data) {
@@ -110,11 +110,11 @@ newTaskForm.addEventListener('submit', (event) => {
         document.querySelector("#success").style.display = "block";
         newTask.addTask(name, description, assignedTo, dueDate, status);
         newTask.save();
-        newTask.render();
+        // newTask.render();
         nameInput.value = '';
         descriptionInput.value = '';
         assignedToInput.value = '';
         dueDateInput.value = '';
-        
+        status.value = '';
     };
     });

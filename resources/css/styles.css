@@ -1,56 +1,31 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans");
-
-@media screen and (min-width: 900px) {
-	article {
-		padding: 1rem 3rem;
-	}
+.tasklist {
+	width: 100%;
 }
 
 .navbar {
 	background-color: rgb(132, 172, 211);
 	padding-left: 0%;
-	position: fixed;
-	width: 100%;
 	z-index: 1;
 }
 
-/* .container {
-  box-shadow: 0 0 5px 2px silver;
-  width: 50%;
-  
-} */
-
 body {
-	/* 
-    background-image: url(../images/gid.jpeg); */
-
-	-webkit-transform: scale(0.999);
-	transform: scale(0.999);
-
-	background-color: rgb(245, 245, 245);
-
-	/* background-size: cover; */
-	background-repeat: no-repeat;
-	background-position: center center;
-	overflow-x: hidden;
-	padding: 0;
-	margin: 0;
 	font-family: "Open Sans", sans-serif;
-	background-size: auto 100%;
 	font-size: 18px;
 }
 
 img {
-	display: block;
 	width: 50px;
-	margin: 0 auto;
 }
 
 h1 {
 	font-weight: bold;
 	text-align: center;
-	padding-top: 10%;
+	margin: 20px;
 	font-size: 25px;
+}
+
+table {
+	align-items: center;
 }
 
 .card {
@@ -85,10 +60,8 @@ table.list {
 } */
 
 input {
-	width: 100%;
-	padding: 12px 20px;
+	width: 80%;
 	margin: 8px 0;
-	display: inline-block;
 }
 
 .output {
@@ -112,6 +85,7 @@ input[type="reset"],
 input[type="submit"] {
 	width: 5rem;
 	justify-self: end;
+	padding: 12px 20px;
 }
 
 input[type="reset"] {
@@ -187,29 +161,20 @@ button.margin-right {
 	color: white;
 }
 
-footer {
-	padding-top: 20px;
+.footer {
 	background-color: rgb(132, 172, 211);
-	padding: 0 1rem;
-	display: block;
-	font-size: 15px;
-}
-
-footer .container {
-	display: flex;
+	font-size: 20px;
 	align-items: center;
-	justify-content: space-between;
-	color: black;
+	margin-top: auto;
+	bottom: 0;
 }
-
-/* part2 */
 
 .jumbotron {
 	background-image: url(../images/hand.jpeg);
 	background-size: cover;
 	background-position: center center;
 	background-repeat: no-repeat;
-	height: 800px;
+	height: 100vh;
 	overflow-x: hidden;
 }
 
@@ -241,5 +206,3 @@ footer .container {
 	text-transform: none;
 	color: rgb(58, 59, 59);
 }
-
-/* 3 */
