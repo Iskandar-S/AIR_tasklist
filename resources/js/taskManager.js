@@ -2,7 +2,7 @@ console.log("connected!");
 
 const createTaskHtml = (id, name, description, assignedTo, dueDate, status) =>
   `
-    <div class="card h-100" style="width: 22rem; height: 15rem; margin: 30px;" data-task-id=${id}>
+    <div class="card" data-task-id=${id}>
       <div class="card-body">
         <table class="table table-borderless">
         <tbody>
@@ -29,7 +29,7 @@ const createTaskHtml = (id, name, description, assignedTo, dueDate, status) =>
         </tbody>
         </table>
       </div>
-      <div class="card-body">
+      <div class="card-body button">
         <a href="#" class="btn btn-success done-button ${status === 'TO DO' ||  status === 'REVIEW' ? 'visible' : 'invisible'}" role="button" id="Done">Mark As Done</a>
         <a href="#" class="btn btn-danger delete-button" role="button" id="delete">Delete</a>
       </div>
