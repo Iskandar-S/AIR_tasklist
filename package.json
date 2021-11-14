@@ -1,5 +1,26 @@
 {
-  "devDependencies": {
+  "name": "air_tasklist",
+  "version": "1.0.0",
+  "description": "!!! Work in your branch",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha 'test/*.js'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spacefox0731/AIR_tasklist.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/spacefox0731/AIR_tasklist/issues"
+  },
+  "homepage": "https://github.com/spacefox0731/AIR_tasklist#readme",
+  "dependencies": {
+    "chai": "^4.3.4",
     "mocha": "^9.1.3"
   }
 }

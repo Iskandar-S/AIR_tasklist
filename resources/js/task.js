@@ -32,11 +32,11 @@ taskCard.addEventListener('click', (event) => {
         if (task.status === 'DONE'){
         // Delete the task
         newTask.deleteTask(taskId);
-
+    }}
         // Save the tasks to localStorage
         newTask.save();
 
         // Render the tasks
         newTask.render();
-    }}
+    
 });
